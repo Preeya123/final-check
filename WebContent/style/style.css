@@ -1,1 +1,112 @@
 /* Add styles for application here */
+body{
+	 height: 100%;
+	 width: 100%;
+	 font-family: sans-serif;
+}
+header{
+	background-color: #0066cc;
+	height: 100px;
+	color: #ffffff;
+	font-size: 25pt;
+	font-family: sans-serif;
+}
+div{
+	height: 720px;
+}
+footer{
+	background-color: #898794;
+	height: 100px;
+	font-size: 20pt;
+	font-family: sans-serif;
+}
+img{
+	height: 50px;
+	width: 50px;
+	margin-left: 30px;
+}
+.movies{
+  	float: right;
+	margin-right: 20px;
+	margin-top: 20px;
+	color: #ffffff;
+}
+#head, #foot{
+	margin-top: 15px;
+}
+#head{
+	margin-left: 10px;
+	font-size: 25pt;
+	margin-right: 10px;
+	color: #ffffff;
+}
+.cont1{
+	margin-left: 310px;
+	font-size: 23pt;
+}
+.cont2{
+	margin-left: 300px;
+	width: 950px;
+	font-size: 15pt;
+	color: #0f0f0f;
+}
+.cont{
+	float: right;
+	margin-right: 10px;
+	margin-bottom: 15px;
+	margin-top: 15px;
+	color: #ffffff;
+}
+.active{
+	text-align: left;
+}
+a{
+	color: #0f0f0f;;
+}
+.title{
+    text-align: left;
+    margin-right: 100px;	
+	width: 200px;
+}
+.boxOffice{
+	text-align: center;
+}
+.action{
+	text-align:center;
+	color: #0f0f0f;
+}
+.genre{
+	text-align: center;
+}
+.hasTeaser{
+	text-align: center;
+}
+.cont4{
+	color: #17e85d;
+	margin-left: 300px;
+	font-size: 15pt;
+	padding: 30px;
+}
+#cont6{
+	background-color: #0349fc;
+}
+.cont9{
+	color: #73767a;
+	margin-left: 300px;
+	margin-bottom: 500px;
+	font-size: 20pt;
+	text-align: center-right;
+	padding: 50px;
+}
+#cont10{
+	color: #348cb3;
+}
+
+#cont12{
+	 margin-left: 310px;
+	 margin-top: 50px;
+}
+.cont11{
+	  margin-left: 400px;
+	  color: #17e85d;
+}
