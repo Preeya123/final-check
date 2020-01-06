@@ -38,8 +38,9 @@ public class MovieListDaoCollectionImpl implements MovieDao {
 	@Override
 	public List<Movie> getMovieCustomer() {
 		ArrayList<Movie> newMovies = new ArrayList<Movie>();
+		Date today=new Date();
 		for (Movie movie : movieList) {
-			if (movie.getDateOfLaunch().after(new Date())) {
+			if (movie.getDateOfLaunch().before(today)) {
 				newMovies.add(movie);
 			}
 		}
