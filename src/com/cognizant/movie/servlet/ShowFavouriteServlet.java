@@ -1,6 +1,7 @@
 package com.cognizant.movie.servlet;
 
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.List;
 
 import javax.servlet.RequestDispatcher;
@@ -42,7 +43,7 @@ public class ShowFavouriteServlet extends HttpServlet {
 			request.setAttribute("movieList", favouriteList);
 			RequestDispatcher rd=request.getRequestDispatcher("favorites.jsp");
 			rd.forward(request,response);
-		}catch(FavouriteEmptyException e) {
+		}catch(FavouriteEmptyException | SQLException e) {
 			RequestDispatcher rd=request.getRequestDispatcher("favorites-empty.jsp");
 		    rd.forward(request,response);
 			}

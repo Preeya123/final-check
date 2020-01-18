@@ -3,11 +3,9 @@ package com.cognizant.moviecruiser.dao;
 import java.sql.SQLException;
 import java.util.List;
 
-import com.cognizant.moviecruiser.model.Favourite;
 import com.cognizant.moviecruiser.model.Movie;
 
-public class FavouriteDaoCollectionImplTest {
-
+public class FavouriteDaoSqlImplTest {
 	public static void main(String[] args) throws FavouriteEmptyException, SQLException {
 		testGetAllFavourite();
 		testAddFavouritelist();
@@ -17,7 +15,7 @@ public class FavouriteDaoCollectionImplTest {
 	}
 
 	public static void testAddFavouritelist() throws FavouriteEmptyException, SQLException {
-		FavouriteDao favouriteDao = new FavouriteDaoCollectionImpl();
+		FavouriteDao favouriteDao = new FavouriteDaoSqlImpl();
 		long totalGross = 01;
 		favouriteDao.addFavouriteList(1, 2l);
 		favouriteDao.addFavouriteList(1, 5l);
@@ -33,7 +31,7 @@ public class FavouriteDaoCollectionImplTest {
 	}
 
 	public static void testRemoveFavourite() throws FavouriteEmptyException {
-		FavouriteDao favouriteDao = new FavouriteDaoCollectionImpl();
+		FavouriteDao favouriteDao = new FavouriteDaoSqlImpl();
 		try {
 		List<Movie> movieListCustomer = favouriteDao.getAllFavouriteList(1);
 		System.out.println("After Removed from Favourites");
@@ -48,7 +46,7 @@ public class FavouriteDaoCollectionImplTest {
 	}
 
 	public static void testGetAllFavourite() throws FavouriteEmptyException {
-		FavouriteDao favouriteDao = new FavouriteDaoCollectionImpl();
+		FavouriteDao favouriteDao = new FavouriteDaoSqlImpl();
 		try {
 		List<Movie> movieListCustomer = favouriteDao.getAllFavouriteList(1);
 		System.out.println("All Favourite movie");
@@ -59,5 +57,4 @@ public class FavouriteDaoCollectionImplTest {
 			e.getMessage();
 			}
 		}
-	}
-
+}

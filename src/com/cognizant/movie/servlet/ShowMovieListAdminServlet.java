@@ -1,6 +1,7 @@
 package com.cognizant.movie.servlet;
 
 import java.io.IOException;
+import java.sql.SQLException;
 import java.text.ParseException;
 import java.util.List;
 
@@ -36,14 +37,17 @@ public class ShowMovieListAdminServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		try {
 			MovieDao movieDao = new MovieListDaoCollectionImpl();
-			List<Movie> movieList = movieDao.getMovieListAdmin();
+			List<Movie> movieList =movieDao.getMovieListAdmin(); 
 			request.setAttribute("movieList", movieList);
 			RequestDispatcher rd=request.getRequestDispatcher("movie-list-admin.jsp");
 			rd.forward(request,response);
             } catch (ParseException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+		} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		
 	}
 

@@ -1,6 +1,7 @@
 package com.cognizant.movie.servlet;
 
 import java.io.IOException;
+import java.sql.SQLException;
 import java.text.ParseException;
 import java.util.List;
 
@@ -59,7 +60,7 @@ public class EditMovieServlet extends HttpServlet {
 				request.setAttribute("msg","Movie List Edited successfully");
 				RequestDispatcher rd=request.getRequestDispatcher("edit-movie-status.jsp");
 				rd.forward(request,response);
-	          } catch (ParseException e) {
+	          } catch (ParseException | SQLException e) {
 				e.printStackTrace();
 			}
 	}

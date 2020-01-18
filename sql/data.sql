@@ -50,14 +50,14 @@ where mo_active='Yes'and mo_date_of_launch<curdate();
 -- -------------------------------------------------------------------
 -- Add to Favourite table
 -- -------------------------------------------------------------------
-insert into favourite(fv_id,fv_us_id,fv_pr_id)
+insert into favorite(fv_id,fv_us_id,fv_pr_id)
 values
 (123,1,2),(124,1,1);
 select 
 fv_id as "Favourite ID",
 fv_us_id as "Favourite User ID",
 fv_pr_id as "Favourite Primary ID"
-from favourite;
+from favorite;
 
 -- -------------------------------------------------------------------
 -- Show Favourites Movie Item table
@@ -67,7 +67,7 @@ mo_title as "Title",
 mo_boxOffice as "Box Office",
 mo_genre as "Genre"
 from movie
-inner join favourite as favourite
+inner join favorite as favorite
 on fv_pr_id=mo_id
 where fv_us_id=1;
 -- -------------------------------------------------------------------
@@ -75,7 +75,7 @@ where fv_us_id=1;
 -- -------------------------------------------------------------------
 select count(mo_boxOffice) as "no of favourite"
 from movie
-inner join favourite as favourite
+inner join favorite 
 on fv_pr_id=mo_id
 where fv_us_id=1;  
  -- -------------------------------------------------------
@@ -92,7 +92,7 @@ where fv_us_id=1;
 fv_id as "Favorite ID",
 fv_us_id as "Favorite User ID",
 fv_pr_id as "Favorite Primary ID"
-from favorite 
+from favorite ;
  
 
 

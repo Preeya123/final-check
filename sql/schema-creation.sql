@@ -44,7 +44,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `movie_cruiser`.`favourite`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `movie_cruiser`.`favourite` (
+CREATE TABLE IF NOT EXISTS `movie_cruiser`.`favorite` (
   `fv_id` INT NOT NULL AUTO_INCREMENT,
   `fv_us_id` INT NULL,
   `fv_pr_id` INT NULL,
